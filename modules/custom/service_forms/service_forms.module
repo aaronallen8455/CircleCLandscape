@@ -1,0 +1,77 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+function make_service_field(&$form, $fieldName) {
+  // use the $fieldName field in place of the 'subject' field
+
+  $form['subject']['widget'][0]['value']['#title'] = t('Service');
+  $form['subject']['widget'][0]['value']['#type'] = 'select';
+  $form['subject']['widget'][0]['value']['#options'] = $form[$fieldName]['widget']['#options'];
+  unset($form['subject']['widget'][0]['value']['#size']);
+  $form['subject']['widget'][0]['value']['#default_value'] = [];
+
+  $form['subject']['#attributes'] = $form[$fieldName]['#attributes'];
+  unset($form[$fieldName]);
+
+  $form['actions']['submit']['#value'] = t('Send request');
+}
+
+function service_forms_form_contact_message_premium_residential_services_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  make_service_field($form, 'field_res_service');
+}
+
+function service_forms_form_contact_message_premium_commercial_services_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  make_service_field($form, 'field_service');
+
+  ////$values = $form_state->getValues();
+  ////dpm(print_r($form['field_service'], true), 'Name');
+  ////dpm(print_r($form['subject'], true), 'Name');
+  ////$form['field_service']['widget']['#field_name'] = 'subject';
+  ////$form['subject'] = $form['field_service'];
+//
+  //// turn the subject field into a services field with list of services.
+//
+  //$form['subject']['widget'][0]['value']['#title'] = t('Service');
+  //$form['subject']['widget'][0]['value']['#type'] = 'select';
+  //$form['subject']['widget'][0]['value']['#options'] = $form['field_service']['widget']['#options'];
+  //unset($form['subject']['widget'][0]['value']['#size']);
+  //$form['subject']['widget'][0]['value']['#default_value'] = [];
+//
+//
+  ////$form['subject']['widget'][0]['value'] = $form['field_service']['widget'];
+  ////$form['subject']['widget'][0]['value']['#field_parents'] = [];
+  ////$form['subject']['widget'][0]['value']['#required'] = 1;
+  ////$form['subject']['widget'][0]['value']['#delta'] = 0;
+  ////$form['subject']['widget'][0]['value']['#weight'] = 0;
+  //////unset($form['subject']['widget'][0]['value']['#field_name']);
+  ////unset($form['subject']['widget'][0]['value']['#parents']);
+  ////$form['subject']['widget'][0]['value']['#maxlength'] = '100';
+  //$form['subject']['#attributes'] = $form['field_service']['#attributes'];
+  //unset($form['field_service']);
+//
+//
+  ////dpm(print_r(array_keys($form), true), 'form');
+  ////$form['subject'] = [
+  ////  '#markup' => '<input type="text" name="subject[0][value]">Commercial Service Request</input>'
+  ////];
+  ////$form_state->setValue('subject', 'Commercial Service Request');
+  ////array_unshift($form['#submit'], 'service_forms_submit_preprocess');
+  ////$form['actions']['submit']['#submit'][] = 'service_forms_submit_preprocess';
+  ///** @var \Drupal\Core\StringTranslation\TranslatableMarkup $submit */
+  //$form['actions']['submit']['#value'] = t('Send request');
+  ////$form['widget'][0]['#title'] = t('')
+  ////$submit->
+}
+
+//function service_forms_submit_preprocess(array &$form, FormStateInterface $form_state) {
+//  $values = $form_state->getValues();
+//  dpm(print_r($form['subject'], true), 'Name');
+//  $form_state->setValue('subject', 'Commercial Service Request');
+//}
+
+//function service_forms_contact_message_premium_commercial_services_form_submit($form, FormStateInterface $form_state) {
+//  dpm('test', 'test');
+//  $form_state->setValue('subject', 'Commercial Service Request');
+//}

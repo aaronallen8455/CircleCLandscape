@@ -1,0 +1,14 @@
+<?php
+
+function slider_theme($existing, $type, $theme, $path) {
+  $variables = [
+    'slider' => [
+      'variables' => [
+        'images' => null,
+      ],
+      'template' => 'slider'
+    ]
+  ];
+
+  return $variables;
+}

@@ -1,0 +1,15 @@
+slider:
+  remote: http://www.jssor.com/
+  version: 17.0
+  license:
+    name: MIT
+    url: https://github.com/jssor/slider/blob/master/MIT-LICENSE.txt
+    gpl-compatible: true
+  js:
+    /libraries/jssor/js/jssor.slider-23.1.6.mini.js: {}
+    js/jssor.js: {}
+  css:
+    component:
+      css/jssor.css: {}
+  dependencies:
+    - core/jquery

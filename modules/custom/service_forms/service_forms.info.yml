@@ -1,0 +1,5 @@
+type: module
+name: Service Forms
+description: 'Alter the service contact forms to customize fields.'
+package: Development
+core: 8.x

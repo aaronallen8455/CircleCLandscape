@@ -1,0 +1,5 @@
+type: module
+name: Slider
+description: 'Creates an image slider using jssor.'
+package: Development
+core: 8.x
