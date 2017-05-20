@@ -5,14 +5,17 @@ use Drupal\Core\Form\FormStateInterface;
 function make_service_field(&$form, $fieldName) {
   // use the $fieldName field in place of the 'subject' field
 
-  $form['subject']['widget'][0]['value']['#title'] = t('Service');
-  $form['subject']['widget'][0]['value']['#type'] = 'select';
-  $form['subject']['widget'][0]['value']['#options'] = $form[$fieldName]['widget']['#options'];
-  unset($form['subject']['widget'][0]['value']['#size']);
-  $form['subject']['widget'][0]['value']['#default_value'] = [];
-
-  $form['subject']['#attributes'] = $form[$fieldName]['#attributes'];
-  unset($form[$fieldName]);
+  //dpm(print_r($form['field_service'], true), 'Name');
+//
+  //$form['subject']['widget'][0]['value']['#title'] = t('Service');
+  //$form['subject']['widget'][0]['value']['#type'] = 'select';
+  ////$form['subject']['widget'][0]['value']['#multiple'] = 1;
+  //$form['subject']['widget'][0]['value']['#options'] = $form[$fieldName]['widget']['#options'];
+  //unset($form['subject']['widget'][0]['value']['#size']);
+  //$form['subject']['widget'][0]['value']['#default_value'] = [];
+//
+  //$form['subject']['#attributes'] = $form[$fieldName]['#attributes'];
+  ////unset($form[$fieldName]);
 
   $form['actions']['submit']['#value'] = t('Send request');
 }

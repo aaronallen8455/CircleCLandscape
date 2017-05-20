@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 
 /**
- * Provides a 'Hello' Block.
+ * Provides a Jssor slider Block.
  *
  * @Block(
  *   id = "slider_block",
