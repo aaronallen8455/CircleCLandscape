@@ -9,6 +9,7 @@
 namespace Drupal\slider\Plugin\views\style;
 
 
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\views\Plugin\views\style\StylePluginBase;
 
 /**
@@ -39,4 +40,35 @@ class JssorSlider extends StylePluginBase {
    * @var bool
    */
   protected $usesRowClass = TRUE;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function defineOptions() {
+    $options = parent::defineOptions();
+    $options['width'] = ['default' => '1300'];
+    $options['height'] = ['default' => '900'];
+
+    return $options;
+  }
+
+  public function buildOptionsForm(&$form, FormStateInterface $form_state) {
+    parent::buildOptionsForm($form, $form_state);
+
+    $form['width'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Width of images'),
+      '#default_value' => $this->options['width'],
+      '#required' => TRUE,
+      '#min' => 10,
+    ];
+
+    $form['height'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Height of images'),
+      '#default_value' => $this->options['height'],
+      '#required' => TRUE,
+      '#min' => 10,
+    ];
+  }
 }

@@ -1,0 +1,8 @@
+menu:
+  js:
+    js/menu.js: {}
+  css:
+    component:
+      css/menu.css: {}
+  dependencies:
+    - core/jquery

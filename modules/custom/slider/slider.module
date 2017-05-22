@@ -30,6 +30,7 @@ function template_preprocess_slider_view_slider(&$variables) {
   $rows = $variables['rows'];
   $style = $view->style_plugin;
   $options = $style->options;
+  $variables['options'] = $options;
 
   $variables['default_row_class'] = !empty($options['default_row_class']);
   foreach ($rows as $id => $row) {

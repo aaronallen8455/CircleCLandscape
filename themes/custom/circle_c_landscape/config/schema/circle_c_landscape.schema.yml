@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bartik theme.
+
+circle_c_landscape.settings:
+  type: theme_settings
+  label: 'Circle C Landscape settings'

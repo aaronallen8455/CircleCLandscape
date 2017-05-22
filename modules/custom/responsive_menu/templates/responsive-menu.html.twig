@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation to format images for jssor.
+ *
+ * Available variables:
+ *     - menu_items
+ *
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="responsive-navigation">
+    <h1 class="nav-mobile-title">Menu</h1>
+    <ul class="navigation-links">
+        {% for title,path in menu_items %}
+            <li class="nav item">
+                <a href="{{ path }}">{{ title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+

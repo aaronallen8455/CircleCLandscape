@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function responsive_menu_theme($existing, $type, $theme, $path) {
+  $variables = [
+    'responsive_menu' => [
+      'variables' => [
+        'menu_items' => null,
+      ],
+      'template' => 'responsive-menu'
+    ]
+  ];
+
+  return $variables;
+}
