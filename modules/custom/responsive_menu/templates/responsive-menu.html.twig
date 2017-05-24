@@ -6,7 +6,6 @@
  * Available variables:
  *     - menu_items
  *
- *
  * @ingroup themeable
  */
 #}
@@ -14,9 +13,9 @@
 <div class="responsive-navigation">
     <h1 class="nav-mobile-title">Menu</h1>
     <ul class="navigation-links">
-        {% for title,path in menu_items %}
+        {% for title,link_path in menu_items %}
             <li class="nav item">
-                <a href="{{ path }}">{{ title }}</a>
+                <a {% if path('<current>') == link_path %}class="current-path"{% endif %} href="{{ link_path }}">{{ title }}</a>
             </li>
         {% endfor %}
     </ul>

@@ -234,7 +234,19 @@ body:not(:target) .region-primary-menu .menu-toggle-target-show:target ~ .menu .
     text-decoration: underline;
   }
 
+  .region-primary-menu a:focus {
+    color: white;
+  }
+
+  .region-primary-menu a:visited {
+    color: white;
+  }
+
+  .region-primary-menu .current-path {
+    text-decoration: underline;
+  }
+
   .region-primary-menu {
-    box-shadow: grey 0 8px 12px;
+    box-shadow: #9c9c9c 0 8px 12px;
   }
 }

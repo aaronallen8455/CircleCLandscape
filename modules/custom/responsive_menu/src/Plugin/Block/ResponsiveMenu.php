@@ -33,6 +33,8 @@ class ResponsiveMenu extends BlockBase implements BlockPluginInterface, Containe
   /** @var  \Drupal\Core\Path\AliasManagerInterface */
   protected $aliasManager;
 
+  protected $currentPath;
+
   public function __construct(
     array $configuration,
     $plugin_id,

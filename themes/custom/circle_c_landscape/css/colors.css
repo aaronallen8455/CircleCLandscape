@@ -21,7 +21,10 @@ body {
   background-color: transparent;
   background-image: url(../images/header-bg.jpg);
   background-repeat: no-repeat;
-  background-position: 130px;
+  background-position-x: 130px;
+  background-position-y: 0;
+  -ms-background-position-x: 130px;
+  -ms-background-position-y: 0;
 }
 a,
 .link {

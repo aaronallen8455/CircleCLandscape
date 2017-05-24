@@ -1,4 +1,7 @@
 /* --------------- Secondary Menu ------------ */
+.region-secondary-menu {
+  float: right;
+}
 
 .region-secondary-menu .menu {
   text-align: right; /* LTR */
