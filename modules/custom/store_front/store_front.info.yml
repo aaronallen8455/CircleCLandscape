@@ -1,0 +1,5 @@
+type: module
+name: Store Front
+description: 'Creates a page where products are displayed'
+package: Development
+core: 8.x

@@ -1,0 +1,5 @@
+type: module
+name: Copyright
+description: 'Adds a block that displays a copyright message'
+package: Development
+core: 8.x

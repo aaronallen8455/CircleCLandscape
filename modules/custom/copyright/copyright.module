@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function copyright_theme($existing, $type, $theme, $path) {
+  return [
+    'copyright' => [
+      'variables' => [
+        'copyright_name' => null,
+      ],
+      'template' => 'copyright'
+    ]
+  ];
+}

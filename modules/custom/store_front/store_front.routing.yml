@@ -1,0 +1,7 @@
+store_front.content:
+  path: '/store'
+  defaults:
+    _controller: '\Drupal\store_front\Controller\StoreController::content'
+    _title: 'Store'
+  requirements:
+    _permission: 'access content'

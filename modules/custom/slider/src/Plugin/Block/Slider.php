@@ -27,16 +27,15 @@ class Slider extends BlockBase implements BlockPluginInterface, ContainerFactory
 
   protected $queryFactory;
 
+  /** @var  \Drupal\Core\Entity\EntityTypeManagerInterface */
   protected $manager;
 
   public function __construct(
     array $configuration,
     $plugin_id,
     $plugin_definition,
-    $queryFactory,
     $manager
   ) {
-    $this->queryFactory = $queryFactory;
     $this->manager = $manager;
 
     parent::__construct($configuration, $plugin_id, $plugin_definition);
@@ -48,10 +47,9 @@ class Slider extends BlockBase implements BlockPluginInterface, ContainerFactory
     $plugin_id,
     $plugin_definition
   ) {
-    $queryFactory = $container->get('entity.query');
     $manager = $container->get('entity_type.manager');
 
-    return new static($configuration, $plugin_id, $plugin_definition, $queryFactory, $manager);
+    return new static($configuration, $plugin_id, $plugin_definition, $manager);
   }
 
   /**
@@ -59,13 +57,14 @@ class Slider extends BlockBase implements BlockPluginInterface, ContainerFactory
    */
   public function build() {
     // get all image nodes
-    $query = $this->queryFactory->get('node');
-    $query
-      ->condition('status', 1)
-      ->condition('type', 'image');
-    $ids = $query->execute();
 
     $storage = $this->manager->getStorage('node');
+
+    $ids = $storage->getQuery()
+      ->condition('status', 1)
+      ->condition('type', 'image')
+      ->execute();
+
     $entities = $storage->loadMultiple($ids);
 
     $images = [];
