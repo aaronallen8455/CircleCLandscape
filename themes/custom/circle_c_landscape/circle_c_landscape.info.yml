@@ -8,6 +8,10 @@ version: VERSION
 core: 8.x
 libraries:
   - circle_c_landscape/global-styling
+libraries-override:
+  commerce_cart/cart_block:
+    js:
+      js/commerce_cart.js: js/commerce_cart.js
 ckeditor_stylesheets:
   - css/base/elements.css
   - css/components/captions.css

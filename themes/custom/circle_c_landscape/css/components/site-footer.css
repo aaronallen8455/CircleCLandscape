@@ -227,3 +227,8 @@
 [dir="rtl"] .site-footer__bottom .menu-item:first-child:last-child a {
   padding-right: 0;
 }
+
+.copyright {
+  display: block;
+  text-align: center;
+}

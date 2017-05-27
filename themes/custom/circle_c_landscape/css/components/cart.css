@@ -1,0 +1,13 @@
+.block-commerce-cart {
+    display: inline-block;
+    background: rgba(255,255,255,.7);
+}
+
+.cart--cart-block {
+    margin: 5px;
+}
+
+.cart-block--contents__links a {
+    margin-right: 10px;
+    border-bottom: 1px dotted !important;
+}

@@ -1,0 +1,4 @@
+store_front:
+  css:
+    component:
+      css/store.css: {}

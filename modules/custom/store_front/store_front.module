@@ -1,0 +1,30 @@
+<?php
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_block_build_BASE_BLOCK_ID_alter().
+ */
+function store_front_block_view_commerce_cart_alter(
+  array &$build,
+  \Drupal\Core\Block\BlockPluginInterface $block
+) {
+  //ksm($build);
+  $build['#pre_render'][] = '_store_front_commerce_cart_pre_render';
+}
+
+function _store_front_commerce_cart_pre_render(array $build) {
+  // change the icon color
+  $build['content']['#icon']['#uri'] = drupal_get_path('module', 'commerce') . '/icons/000000/cart.png';
+
+  // get cart ID
+  $cart_provider = Drupal::getContainer()->get('commerce_cart.cart_provider');
+  $cartId = $cart_provider->getCartIds()[0];
+  // add checkout link
+  $build['content']['#links'][] = [
+    '#type' => 'link',
+    '#title' => t('Checkout'),
+    '#url' => Url::fromRoute('commerce_checkout.form', ['commerce_order' => $cartId]),
+  ];
+
+  return $build;
+}

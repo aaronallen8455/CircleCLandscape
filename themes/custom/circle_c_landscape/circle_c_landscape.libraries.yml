@@ -8,6 +8,7 @@ global-styling:
       css/components/book.css: {}
       css/components/breadcrumb.css: {}
       css/components/captions.css: {}
+      css/components/cart.css: {}
       css/components/comments.css: {}
       css/components/contextual.css: {}
       css/components/demo-block.css: {}

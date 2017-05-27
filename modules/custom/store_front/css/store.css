@@ -1,0 +1,11 @@
+.product-list-item {
+    float: left;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.product-list-item img {
+    float: left;
+    margin: 20px 20px 20px 0;
+}

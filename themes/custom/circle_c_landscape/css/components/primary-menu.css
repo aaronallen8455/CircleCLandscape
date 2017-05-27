@@ -5,8 +5,6 @@
   background: #0079e9;
 }
 
-
-
 .region-primary-menu .menu {
   font-size: 0.929em;
   margin: 0 5px;
@@ -231,7 +229,8 @@ body:not(:target) .region-primary-menu .menu-toggle-target-show:target ~ .menu .
 
   .region-primary-menu a:hover {
     color: white;
-    text-decoration: underline;
+    border-bottom: solid 2px;
+    /*text-decoration: underline;*/
   }
 
   .region-primary-menu a:focus {
@@ -243,7 +242,8 @@ body:not(:target) .region-primary-menu .menu-toggle-target-show:target ~ .menu .
   }
 
   .region-primary-menu .current-path {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    border-bottom: solid 2px;
   }
 
   .region-primary-menu {

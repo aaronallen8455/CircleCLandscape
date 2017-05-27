@@ -112,9 +112,18 @@ input.form-search,
 input.form-file,
 input.form-number,
 input.form-color,
-textarea.form-textarea,
+textarea.form-textarea {
+  /*border: 1px solid #ccc;*/
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 2px;
+  border: none;
+  color: #3b3b3b;
+}
 select.form-select {
   border: 1px solid #ccc;
+  margin-top: 10px;
   color: #3b3b3b;
 }
 input.form-submit:hover,

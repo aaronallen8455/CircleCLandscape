@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Functions to support theming in the Bartik theme.
+ * Functions to support theming in the Circle C Landscape theme.
  */
 
 use Drupal\Core\Form\FormStateInterface;
