@@ -1,6 +1,8 @@
 .block-commerce-cart {
     display: inline-block;
     background: rgba(255,255,255,.7);
+    margin-right: 30px;
+    margin-top: 15px;
 }
 
 .cart--cart-block {
@@ -10,4 +12,12 @@
 .cart-block--contents__links a {
     margin-right: 10px;
     border-bottom: 1px dotted !important;
+}
+
+@media all and (max-width: 48em) {
+    .block-commerce-cart {
+        position: absolute;
+        right: 10px;
+        margin: 0;
+    }
 }

@@ -45,7 +45,7 @@
 @media all and (max-width: 48em) { /* 768px */
     .navigation-links {
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         padding: 0;
         margin: 0;
     }
@@ -89,6 +89,9 @@
 
     .nav.item > a {
         border-bottom: none;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
     .responsive-navigation {
@@ -99,13 +102,13 @@
         -ms-transition: left .3s;
         background: #f1f1f1;
         height: 100%;
-        left: -80%;
-        left: calc(-1 * (100% - 104px));
+        left: -85%;
+        /*left: calc(-1 * (100% - 104px));*/
         overflow: auto;
         position: fixed;
         top: 0;
-        width: 80%;
-        width: calc(100% - 104px);
+        width: 85%;
+        /*width: calc(100% - 104px);*/
         z-index: 900;
         padding: 0;
     }
@@ -135,8 +138,8 @@
     }
 
     .nav-open #page-wrapper {
-        left: 80%;
-        left: calc(100% - 104px);
+        left: 85%;
+        /*left: calc(100% - 104px);*/
     }
 
     .nav-open .nav-sections {

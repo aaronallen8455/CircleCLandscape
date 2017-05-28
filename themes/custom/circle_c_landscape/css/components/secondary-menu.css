@@ -27,3 +27,9 @@
 .region-secondary-menu .menu a:focus {
   text-decoration: underline;
 }
+
+@media all and (max-width: 48em) {
+  .region-secondary-menu {
+    float: none;
+  }
+}
